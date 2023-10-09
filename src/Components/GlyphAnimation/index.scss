@@ -1,0 +1,42 @@
+.text-Glpyh {
+    display: inline-block;
+    opacity: 0;    
+    animation: slideIn 0.2s ease-in-out forwards;
+    animation-fill-mode: forwards;
+    min-width: 10px;
+}
+
+  .glyph-text {
+    opacity: 0; 
+    transform: translateX(20px);
+    animation: fadeInOut 10s 0.8s ease-in-out;
+  }
+
+  @for $i from 1 through 10 {
+    .glyph-text._#{$i} {
+        animation-delay: #{$i / 10}s;
+    }
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0; /* Start with zero opacity */
+    }
+    50% {
+      opacity: 1; /* Stay at full opacity until 75% */
+    }
+    100% {
+      opacity: 0; /* Fade out, reaching zero opacity at 100% */
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+        opacity: 0; /* Initial opacity set to zero */
+        transform: translateX(20px); /* Initial position off-screen to the left */
+      }
+      to {
+        opacity: 1; /* Fade in to full opacity */
+        transform: translateX(0); /* Slide in to the center */
+      }
+  }

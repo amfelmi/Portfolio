@@ -1,0 +1,43 @@
+$primary-color: #b7c1de;
+
+@import 'animate.css';
+
+@font-face {
+  font-family: 'SD Glitch';
+  src: url('./assets/fonts/SdglitchdemoRegular-YzROj.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Glitch Goblin';
+  src: url('./assets/fonts/GlitchGoblin-2O87v.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SD Asian';
+  src: url('./assets/fonts/Sdasian-WyDon.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cyber Rider';
+  src: url('./assets/fonts/CyberwayRiders-lg97d.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SD Cyber Glitch';
+  src: url('./assets/fonts/Demosdcyberglitch-yw6GM.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'La Belle Aurore';
+  src: url('./assets/fonts/LaBelleAurore.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
+}
+
+input,
+textarea {
+  font-family: 'Helvetica';
+}

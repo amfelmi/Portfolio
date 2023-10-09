@@ -1,0 +1,49 @@
+.launcher-page {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;  
+
+    .launcher-text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        .text {
+            font-size: 10em;
+            animation: fadeOut 1s 2s forwards;
+
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+
+    .launcher-image-container {
+        animation: slideOut 1s 4s ease-out forwards;
+      }
+      
+      @keyframes slideOut {
+        0% {
+            opacity: 1;
+          transform: translateX(0);
+        }
+        90% {
+          opacity: 0;
+          transform: translateX(-50%);
+      }
+        100% {
+            opacity: 0;
+          transform: translateX(-200%);
+        }
+      }
+}

@@ -1,0 +1,50 @@
+.text-animate {
+    display: inline-block;
+    opacity: 0;
+    animation: slideIn 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+@keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+.text-animate-hover {
+    min-width: 10px;
+    display: inline-block;
+    animation-fill-mode: both;
+
+    &:hover {
+        animation: rubberBand 1s;
+        color: #9329f7;
+        cursor: none;
+    }
+}
+
+@for $i from 1 through 50 {
+    .text-animate._#{$i} {
+        animation-delay: #{$i / 15}s;
+    }
+}
+
+// .text-animate {
+//     display: inline-block;
+//     opacity: 0;
+//     animation: slideIn 1s;
+//     animation-fill-mode: forwards;
+//     animation-delay: 3s;
+// }
+
+// @for $i from 1 through 15 {
+//     .text-animate._#{$i} {
+//         animation-delay: 3s + #{$i / 2}s;
+//     }
+// }

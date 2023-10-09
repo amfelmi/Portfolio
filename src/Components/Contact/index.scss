@@ -1,0 +1,25 @@
+.test {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    .title-test{
+        font-size: 50px;
+    }
+
+}
+
+.fade {
+    opacity: 0;
+    animation: fadeIn 0.8s 1s forwards;
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    } 
+    100% {
+        opacity: 1;
+    }
+}
+}

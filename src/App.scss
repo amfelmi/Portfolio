@@ -37,6 +37,16 @@ $primary-color: #b7c1de;
   src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'Megrim Regular';
+  src: url('./assets/fonts/4a8cd51c-cf0e-4708-8292-4248daf7a07d.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Wallpoet Regular';
+  src: url('./assets/fonts/af05f960-e9e3-4070-bff0-5f8606dd617c.ttf') format('truetype');
+}
+
 input,
 textarea {
   font-family: 'Helvetica';

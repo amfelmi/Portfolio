@@ -1,8 +1,10 @@
 .navbar {
     background-color: rgb(15, 15, 15);
     width: 100px;
-    height: 100%;
+    height: 100vh;
+    padding: 2px;
     position: absolute;
+    position: sticky;
     top: 0;
     z-index: 3;
     min-height: 500px;
@@ -17,6 +19,12 @@
             margin: 8px auto;
             width: 100px;
             height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            cursor: pointer;
         }
     }
 
@@ -28,15 +36,20 @@
         top: 50%;
         margin-top: -120px;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
         a {
             font-size: 24px;
             color: #4d4d4e;
             display: block;
-            line-height: 51px;
+            margin-top: 10px;
             height: 60px;
             position: relative;
             text-decoration: none;
+            width: 50px;
 
             i {
                 transition: all 0.3s ease-out;
@@ -44,6 +57,7 @@
 
             &:hover {
                 color: #9329f7;
+                cursor: pointer;
 
                 svg {
                     opacity: 0;
@@ -59,7 +73,7 @@
                 font-size: 11px;
                 letter-spacing: 2px;
                 position: absolute;
-                bottom: 0;
+                bottom: 49%;
                 display: block;
                 width: 100%;
                 text-align: center;
@@ -74,9 +88,15 @@
             }
         }
 
-        a.about-link {
+        // a.about-link {
+        //     &::after {
+        //         content: 'ABOUT';
+        //     }
+        // }
+
+        a.project-link {
             &::after {
-                content: 'ABOUT';
+                content: 'PROJECTS';
             }
         }
 
@@ -105,7 +125,7 @@
         margin: 0;
 
         li {
-            a{
+            a {
                 padding: 7px 0;
                 display: block;
                 font-size: 18px;

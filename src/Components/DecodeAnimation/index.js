@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './index.scss'
 
-const AnimatedLetters = ({ letterClass, strArray }) => {
+const AnimatedLetters = ({ letterClass, strArray, delay }) => {
     const [text, setText] = useState(strArray.join(''));
 
     let CHAR_DURATION = 1 / 10;
@@ -59,7 +59,7 @@ const AnimatedLetters = ({ letterClass, strArray }) => {
     useEffect(() => {
         const delayStart = setTimeout(() => {
             animate();
-        }, 4000); 
+        }, delay); 
         
         return () => clearTimeout(delayStart);
     }, []);

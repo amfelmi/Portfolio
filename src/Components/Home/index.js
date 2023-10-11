@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-scroll'
 import './index.scss'
 import LogoTitleA from '../../assets/images/logo-letter-a.png';
 import LogoTitleE from '../../assets/images/logo-letter-e.png';
@@ -11,7 +11,8 @@ import About from './About';
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const [letterClassTwo, setLetterClassTwo] = useState('text-decoder')
-  const [activated, setActivated] = useState(false) 
+  const [activated, setActivated] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   const nameArray = ['B', 'D', 'U', 'L', 'M', 'A', 'J', 'I', 'D']
   const surnameArray = ['L', 'M', 'I']
@@ -35,20 +36,42 @@ const Home = () => {
     return () => clearTimeout(timeoutId);
   }, []);
 
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setActivated(true)
+    }, 6000);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
+
   const handleActivationStatus = (() => {
     if (activated) {
-        setActivated(false);
+      setActivated(false);
     } else {
       setActivated(true);
     }
   })
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
+
   return (
-    <div className='container home-page'>
+    <section id='home' className='container home-page'>
       <button onClick={handleActivationStatus} className={`activator ${activated ? 'about-active' : 'about-inactive'}`}>
-      {activated ? '>' : '<'}
-        </button>
-      <a className='scroller' href='about'></a>
+        <span className={`${activated ? '' : 'spin'}`}>
+        {activated ? '>' : 'About me'}
+        </span>
+      </button>
       <Launcher />
       <div className='text-zone'>
         <h1>
@@ -64,13 +87,31 @@ const Home = () => {
           />
         </h1>
         <h2><DecodeAnimation letterClass={letterClassTwo}
-            strArray={jobArray}
-          /> | <DecodeAnimation letterClass={letterClassTwo}
+          strArray={jobArray}
+          delay={4000}
+        /> | <DecodeAnimation letterClass={letterClassTwo}
           strArray={jobArray_2}
-        /></h2>
+          delay={4000}
+          /></h2>
+        <Link
+          to="contact"
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className='flat-button'>
+          CONTACT ME
+        </Link>
+        <Link
+          to='projects'
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          <a className={`scroller ${!isScrolled ? 'visible' : ''}`}></a>
+        </Link>
       </div>
-         <About isActivated={activated} />
-    </div>
+      <About isActivated={activated} />
+    </section>
   )
 }
 

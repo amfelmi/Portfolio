@@ -6,9 +6,8 @@ body {
   margin: 0;
   font: 300 11px/1.4 'Helvetica', 'sans-serif';
   color: #9329f7;
+  overflow-x: hidden;
   background-color: rgb(15, 15, 15);
-  overflow: hidden;
-  display: block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

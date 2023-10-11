@@ -73,22 +73,42 @@
 
     .flat-button {
         color: #b7c1de;
-        font-size: 13px;
+        font-size: 18px;
         font-weight: 400;
         letter-spacing: 4px;
-        font-family: 'Glitch Goblin';
+        font-family: 'Wallpoet Regular';
         text-decoration: none;
         padding: 10px 18px;
-        border: 1px solid #ff0000;
+        border: 1px solid #4B0082;
         border-radius: 5px;
         margin-top: 25px;
         float: left;
-        animation: fadeIn 1s 4s backwards;
+        animation: fadeIn 1s 4s backwards, enlargeShrink 4s infinite 4s;
         white-space: nowrap;
+        background-color: #4B0082;
+
 
         &:hover {
-            background-color: #ff0000;
+            background-color: #7f03d8;
             color: #b7c1de;
+            cursor: pointer;
+        }
+
+        @keyframes enlargeShrink {
+
+            0%,
+            10% {
+                transform: scale(1);
+            }
+
+            50%,
+            60% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
     }
 
@@ -98,31 +118,67 @@
         background-color: #8e16ff;
         border: 2px solid #4B0082;
         border-radius: 5px;
-        width: 30px;
-        height: 150px;
+        width: 37px;
+        height: 160px;
         position: fixed;
         bottom: 42%;
         right: 0;
+        transition: opacity 0.5s ease;
 
         &:hover {
             cursor: pointer;
         }
+
+        .fade-out {
+            opacity: 0;
+        }
+
+        .spin {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
     }
-
-
+    
 
     .scroller {
         border: 2px solid #8400ff;
         border-radius: 20px;
         width: 28px;
         height: 40px;
-        position: fixed;
+        position: absolute;
         bottom: 5%;
-        left: 48%;
+        left: 49.4%;
         transition-property: opacity;
         transition-duration: var(--durationL);
         transition-timing-function: ease;
-        animation: fadeIn 1s 4s backwards;
+        animation: goOut 1s forwards;
+    }
+
+    .visible {
+        opacity: 1;
+        animation: comeBack 1s forwards;
+    }
+
+    @keyframes comeBack {
+        0% {
+            transform: translateY(25%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes goOut {
+        0% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(25%);
+            opacity: 0;
+        }
     }
 
     .scroller:before {

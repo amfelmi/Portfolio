@@ -1,7 +1,7 @@
 import './index.scss';
 import React, { useState, useEffect } from 'react';
 
-const GlyphAnimation = ({ letterClass, strArray, idx, delay = 5000 }) => {
+const GlyphAnimation = ({ letterClass, strArray, idx, delay }) => {
   const glyphs = [
     'ア', 'イ', 'ウ', 'エ', 'オ',
     'カ', 'シ', 'サ', 'シ', 'ス', 'ソ','マ', 'ミ', 'ム', 'メ', 'モ',

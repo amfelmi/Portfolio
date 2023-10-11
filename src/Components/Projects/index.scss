@@ -1,0 +1,27 @@
+#projects {
+    height: 835px;
+    width: 1456px;
+    padding: 0 128px 24px 192px;
+}
+
+.section-title {
+    font-family: 'Wallpoet Regular';
+}
+
+.note {
+    font-size: 18px;
+    color: white;
+    background-color: grey;
+    width: 80%;
+}
+
+.temp-link {
+    color: #6700c7;
+    font-weight: bold;
+    font-size: 20px;
+
+    &:hover {
+        cursor: pointer;
+        color: purple;
+    }
+}

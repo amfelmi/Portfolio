@@ -1,19 +1,19 @@
 import './App.scss'
-import { Routes, Route } from 'react-router-dom'
 import Layout from './Components/Layout/index'
+import Sidebar from './Components/Sidebar'
 import Home from './Components/Home'
+import Projects from './Components/Projects'
 import Contact from './Components/Contact'
 
 function App() {
   return (
-    <>
-    <Routes>
-      <Route path="/" element={<Layout />} >
-      <Route index element={<Home />} />
-      <Route path="contact" element={<Contact />} />
-      </Route>
-    </Routes>
-    </>
+    <div className='app'>
+      <Layout />
+      <Sidebar />
+      <Home />
+      <Projects />
+      <Contact />
+    </div>
   );
 }
 

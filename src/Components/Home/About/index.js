@@ -22,6 +22,9 @@ const About = ({ isActivated }) => {
           <p className='paragraph'>
             💡 Actively exploring <span className='highlight'>Cloud Computing </span> through Azure, I bring a unique perspective shaped by my experiences in both engineering and technology.
           </p>
+          <p className='paragraph'>
+          ⚽ I love watching and playing  football and am a avid supporter of Arsenal FC. Alongside this, I love to edit 🎥, code 👨🏾‍💻 and play video games! 🎮
+          </p>
         </div>
       </div>
     </div>

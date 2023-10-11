@@ -106,8 +106,9 @@ const Home = () => {
           smooth={true}
           offset={-70}
           duration={500}
+          className={`scroller ${!isScrolled ? 'visible' : ''}`}
         >
-          <a className={`scroller ${!isScrolled ? 'visible' : ''}`}></a>
+        
         </Link>
       </div>
       <About isActivated={activated} />

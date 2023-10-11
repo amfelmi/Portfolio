@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './index.scss';
 
 const Program = (props) => {
-  const { idx, title, video, description } = props;
+  const { idx, title, video } = props;
   return (
     <div className='Program-container'>
       <div className='Program-info'>
@@ -32,9 +32,8 @@ const Program = (props) => {
           id='mygamelistvideo'
           controls
           autoPlay
-          muted='true'
-          loop='true'
-          className=''
+          muted={true}
+          loop={true}
         >
           <source src={video} type='video/mp4' />
           <source src={video} type='video/ogg' />
@@ -49,7 +48,6 @@ Program.propTypes = {
   idx: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   video: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
 };
 
 export default Program;

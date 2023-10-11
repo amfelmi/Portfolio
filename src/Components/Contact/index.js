@@ -7,7 +7,6 @@ import emailjs from '@emailjs/browser'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 
 const Contact = () => {
-  const [letterClass, setLetterClass] = useState('text-decoder-contact')
   const textArray = ['S', 'a', 'y', ' ', 'h', 'e', 'l', 'l', 'o'] 
   const refForm = useRef()
 

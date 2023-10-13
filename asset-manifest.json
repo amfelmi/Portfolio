@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.2798526a.css",
-    "main.js": "/Portfolio/static/js/main.fda14dd6.js",
+    "main.css": "/Portfolio/static/css/main.cd573700.css",
+    "main.js": "/Portfolio/static/js/main.10f7ea9b.js",
     "static/js/787.89284b06.chunk.js": "/Portfolio/static/js/787.89284b06.chunk.js",
     "static/media/my game list website.mp4": "/Portfolio/static/media/my game list website.bbb7f72a8b17b77deb89.mp4",
     "static/media/portfolio picture.jpg": "/Portfolio/static/media/portfolio picture.f1ab1d29b9991737d5de.jpg",
@@ -18,12 +18,12 @@
     "static/media/CoolveticaRg-Regular.woff2": "/Portfolio/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "static/media/Demosdcyberglitch-yw6GM.ttf": "/Portfolio/static/media/Demosdcyberglitch-yw6GM.ad21887a0de0fa8ba855.ttf",
     "index.html": "/Portfolio/index.html",
-    "main.2798526a.css.map": "/Portfolio/static/css/main.2798526a.css.map",
-    "main.fda14dd6.js.map": "/Portfolio/static/js/main.fda14dd6.js.map",
+    "main.cd573700.css.map": "/Portfolio/static/css/main.cd573700.css.map",
+    "main.10f7ea9b.js.map": "/Portfolio/static/js/main.10f7ea9b.js.map",
     "787.89284b06.chunk.js.map": "/Portfolio/static/js/787.89284b06.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2798526a.css",
-    "static/js/main.fda14dd6.js"
+    "static/css/main.cd573700.css",
+    "static/js/main.10f7ea9b.js"
   ]
 }

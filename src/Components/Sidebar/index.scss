@@ -137,4 +137,32 @@
             }
         }
     }
+    @media (max-width: 767px) {
+        width: 40px; 
+        min-height: 0; 
+        padding: 1px; 
+
+        .logo img {
+            width: 70px; 
+        }
+
+        nav {
+            height: auto;
+        a {
+            &::after {
+                font-size: 9px; 
+            }
+        }
+    }
+
+        ul {
+            li {
+                a {
+                    font-size: 18px; /* Adjust font size for mobile devices */
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+
 }

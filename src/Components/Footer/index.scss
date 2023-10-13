@@ -1,0 +1,15 @@
+.footer {
+    background-color: transparent; 
+    color: #fff; 
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    font-size: 18px;
+    font-family: 'Coolvetica';
+    letter-spacing: 1px;
+
+    @media (max-width: 767px) {
+        padding: 20px;
+        font-size: 11px;
+    }
+  }

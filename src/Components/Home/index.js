@@ -19,6 +19,8 @@ const Home = () => {
   const jobArray = ['W', 'e', 'b', " ", 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r']
   const jobArray_2 = ['J', 'a', 'v', 'a', ' ', 'E', 'n', 'g', 'i', 'n', 'e', 'e', 'r']
 
+  const isMobile = window.innerWidth <= 767;
+
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setLetterClass('text-animate-hover')
@@ -36,13 +38,13 @@ const Home = () => {
     return () => clearTimeout(timeoutId);
   }, []);
 
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setActivated(true)
-    }, 6000);
+  // useEffect(() => {
+  //   const timeoutId = setTimeout(() => {
+  //     setActivated(true)
+  //   }, 6000);
 
-    return () => clearTimeout(timeoutId);
-  }, []);
+  //   return () => clearTimeout(timeoutId);
+  // }, []);
 
   const handleActivationStatus = (() => {
     if (activated) {
@@ -111,7 +113,7 @@ const Home = () => {
         
         </Link>
       </div>
-      <About isActivated={activated} />
+      {!isMobile && <About isActivated={activated}/>}
     </section>
   )
 }

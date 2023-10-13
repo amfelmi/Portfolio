@@ -11,6 +11,11 @@
         transform: translateY(-50%);
         width: 50%;
         max-height: 90%;
+
+        @media (max-width: 767px) {
+            left: 10%;
+            width: 80%;
+        }
     }
 
     h1 {
@@ -38,6 +43,11 @@
             left: 20px;
             animation: fadeIn 1s 4s backwards;
             opacity: 0.6;
+
+            @media (max-width: 767px) {
+                top: 20%;
+                font-size: 16px;
+            }
         }
 
         &::after {
@@ -49,6 +59,12 @@
             margin-top: 90px;
             animation: fadeIn 1s 4s backwards;
             opacity: 0.6;
+
+            @media (max-width: 767px) {
+                margin-top: 50px;
+                margin-left: 50px;
+                font-size: 16px;
+            }
         }
 
         img {
@@ -58,6 +74,14 @@
             height: auto;
             animation: slideIn 1.5s linear both;
             animation-delay: 4s;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 30px;
+            
+            .logo-title-A,.logo-title-E {
+                width: 40px;
+            }
         }
     }
 
@@ -69,6 +93,11 @@
         font-family: sans-serif;
         letter-spacing: 3px;
         animation: fadeIn 1s 4s backwards;
+
+        @media (max-width: 767px) {
+            font-size: 13px;
+            letter-spacing: 0px;
+        }
     }
 
     .flat-button {
@@ -86,6 +115,10 @@
         animation: fadeIn 1s 4s backwards, enlargeShrink 4s infinite 4s;
         white-space: nowrap;
         background-color: #4B0082;
+
+        @media (max-width: 767px) {
+                padding: 5px 5px;
+        }
 
 
         &:hover {
@@ -115,7 +148,7 @@
     .activator {
         color: #fff;
         font-size: 23px;
-        background-color: #8e16ff;
+        background: #8400ff;
         border: 2px solid #4B0082;
         border-radius: 5px;
         width: 37px;
@@ -123,10 +156,19 @@
         position: fixed;
         bottom: 42%;
         right: 0;
-        transition: opacity 0.5s ease;
+        transition: background 0.2s ease;
+
+        @media (max-width: 767px) {
+            background-color: transparent;
+            width: 30px;
+            height: 120px;
+            font-size: 15px;
+            opacity: 0;
+        }
 
         &:hover {
             cursor: pointer;
+            background: #4B0082;
         }
 
         .fade-out {

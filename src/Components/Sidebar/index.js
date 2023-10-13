@@ -4,7 +4,7 @@ import React from 'react'
 import LogoA from './../../assets/images/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faUser, faHome, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faGoogle, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faReact, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Sidebar = () => {
   return (
@@ -58,9 +58,9 @@ const Sidebar = () => {
           <a
             target='"_blank'
             rel='noreferrer'
-            href='https://www.linkedin.com/in/abdulmajid-elmi-0a199b179/' /* Change the link to this into gmail */
+            href='https://github.com/amfelmi/Portfolio' /* Change the link to this into gmail */
           >
-            <FontAwesomeIcon icon={faGoogle} color="#4d4d4e" />
+            <FontAwesomeIcon icon={faReact} color="#4d4d4e" />
           </a>
         </li>
         <li>

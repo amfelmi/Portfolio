@@ -3,9 +3,12 @@ import React from 'react'
 import Photo from '../../../assets/images/portfolio picture.jpg'
 
 const About = ({ isActivated }) => {
+  const isMobile = window.innerWidth <= 767;
+
   return (
-    <div className={`screen ${isActivated ? 'activated' : 'deactivated'}`}>
+    <div id="about" className={`screen ${isActivated ? 'activated' : 'deactivated'}`}>
       <div className='screen-container'>
+        { isMobile && <h1 className='about-title'>{'< About />'}</h1> }
         <div className='screen-image-container'>
           <img src={Photo} className='photo' />
         </div>

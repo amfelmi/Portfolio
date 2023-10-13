@@ -9,6 +9,11 @@
       position: relative;
       --time: 2s;
 
+      @media (max-width: 767px) {
+        width: 150px;
+        height: 150px;
+    }
+
           .red {
               animation-name: imgGlitch;
               animation-duration: var(--time);

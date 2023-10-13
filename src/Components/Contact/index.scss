@@ -2,6 +2,14 @@
     height: 835px;
     width: 1456px;
     padding: 0 128px 24px 192px;
+
+    @media (max-width: 767px) {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        margin-left: 15%;
+    }
 }
 
 .contact-container {
@@ -10,7 +18,6 @@
     justify-content: space-evenly;
     width: 100%;
     height: 80%;
-    
 }
 
 .text-container {
@@ -23,7 +30,6 @@
 .map-container {
     width: 100%;
     height: 100%;
-    
 }
 
 .text-zone {
@@ -41,6 +47,10 @@
 .contact-form {
     width: 100%;
     margin-top: 15px;
+
+    @media (max-width: 767px) {
+        width: 140%;
+    }
 
     li {
         padding: 0;
@@ -144,6 +154,10 @@ textarea {
     animation: fadeIn 1s 1.5s forwards;
     text-align: right;
 
+    @media (max-width: 767px) {
+        visibility: hidden;
+    }
+
     span {
         font-size: 16px;
         display: block;
@@ -157,6 +171,10 @@ textarea {
     width: 100%;
     height: 100%;
     border-radius: 30px;
+
+    @media (max-width: 767px) {
+        visibility: hidden;
+    }
 }
 
 .leaflet-container {
@@ -166,6 +184,10 @@ textarea {
     position: relative;
     opacity: 0;
     animation: backInRight 1s 1.2s forwards;
+
+    @media (max-width: 767px) {
+        visibility: hidden;
+    }
 }
 
 .contact-title {
@@ -174,4 +196,8 @@ textarea {
     align-self: flex-start;
     margin-left: 40px;
     color: #fff;
+
+    @media (max-width: 767px) {
+        font-size: 30px;
+    }
 }

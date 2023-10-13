@@ -16,6 +16,10 @@
             font-size: 10em;
             animation: fadeOut 1s 2s forwards;
 
+            @media (max-width: 767px) {
+              font-size: 20px;
+          }
+
         }
 
         @keyframes fadeOut {
@@ -30,6 +34,10 @@
 
     .launcher-image-container {
         animation: slideOut 1s 4s ease-out forwards;
+
+        @media (max-width: 767px) {
+          width: 150px;
+      }
       }
       
       @keyframes slideOut {

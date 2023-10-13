@@ -2,6 +2,15 @@
     height: 835px;
     width: 1456px;
     padding: 0 128px 24px 192px;
+
+    @media (max-width: 767px) {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        margin-top: 100%;
+        margin-left: 15%;
+    }
 }
 
 .section-title {
@@ -13,15 +22,24 @@
     color: white;
     background-color: grey;
     width: 80%;
+
+    @media (max-width: 767px) {
+        font-size: 16px;
+    }
 }
 
 .temp-link {
     color: #6700c7;
     font-weight: bold;
     font-size: 20px;
+    text-decoration: none;
 
     &:hover {
         cursor: pointer;
         color: purple;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 18px;
     }
 }

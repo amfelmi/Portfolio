@@ -6,15 +6,37 @@
     position: absolute;
     top: 0;
     right: 0;
+
+    @media (max-width: 767px) {
+      width: 700px;
+      height: 700px;
+      position: static;
+      background-color: transparent;
+      border: none;
+  }
   
     &.activated {
       animation: slideScreenIn 1s cubic-bezier(0.68, 0, 0.27, 1) forwards;
       transform: translateX(100%);
+
+      @media (max-width: 767px) {
+        animation: none;
+        transform: translateX(0);
+    }
     }
   
     &.deactivated {
       animation: slideScreenOut 1s cubic-bezier(0.68, 0, 0.27, 1) forwards;
       transform: translateX(100%);
+
+      @media (max-width: 767px) {
+        animation: none;
+        transform: translateX(0);
+    }
+    }
+
+    .about-title {
+      margin-left: 30px;
     }
   
     @keyframes slideScreenOut {
@@ -44,12 +66,23 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      
+      @media (max-width: 767px) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+       }
   
       .screen-image-container {
         position: relative;
         padding: 15px;
         margin-left: 50px;
         min-width: 500px;
+
+        @media (max-width: 767px) {
+          min-width: 250px;
+          margin-left: 0;
+        }
       }
   
       .screen-info-container {
@@ -58,6 +91,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+      }
+
+        @media (max-width: 767px) { 
+          width: 350px;
+          margin-left: 50px;
       }
     }
   
@@ -70,11 +108,24 @@
       &:hover {
         width: 100%;
       }
+
+      @media (max-width: 767px) {
+        width: 100%;
+        &:hover {
+          width: 100%;
+        }
+      }
     }
   
     .paragraph {
       font-size: 20px;
       color: #fff;
+
+      @media (max-width: 767px) { 
+        font-size: 15px;
+        max-width: 100%;
+        word-wrap: break-word;
+      }
     }
   
     .greeting {

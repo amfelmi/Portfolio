@@ -1,15 +1,26 @@
 .Program-container {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     padding: 15px;
     margin-top: 5%;
     color: #b7c1de;
-    
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 0;
+      margin-top: 0%;
+      width: 350px;
+    }
   }
   
   .Program-info {
-    padding: 10px; 
+    padding: 10px;
+
+    @media (max-width: 767px) {
+      padding: 0;
+    }
   }
 
   .Program-title {
@@ -19,12 +30,22 @@
   }
 
   .Program-description {
-    margin-top: 10px; 
+    margin-top: 10px;
     font-size: 18px;
+
+    @media (max-width: 767px) {
+      font-size: 15px;
+      margin: 7%;
+      padding: 0;
+    }
   }
 
   .Program-description-item {
     padding: 8px;
+
+    @media (max-width: 767px) {
+      padding: 4px;
+    }
   }
   
   #mygamelistvideo {
@@ -36,12 +57,23 @@
   .Program-video {
     margin-right: 3%;
     max-width: 900px;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      margin-right: 15%;
+      max-width: 500px;
+    }
   }
 
   .technologies {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+
+    @media (max-width: 767px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);  
+    }
   }
 
   .technology-items {

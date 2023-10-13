@@ -3,10 +3,10 @@ import './index.scss'
 
 const Footer = () => {
   return (
-    <div>
-      
+    <div className="footer">
+      <p>© 2023 Designed and Implemented by Abdulmajid Elmi</p>
     </div>
-  )
-}
+  );
+};
 
 export default Footer

@@ -3,9 +3,12 @@
     height: 90vh;
     background-color: #18002b;
     border: 1px solid grey;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
+    opacity: 0;
+    z-index: 1000;
+    
 
     @media (max-width: 767px) {
       width: 700px;
@@ -17,46 +20,46 @@
   
     &.activated {
       animation: slideScreenIn 1s cubic-bezier(0.68, 0, 0.27, 1) forwards;
-      transform: translateX(100%);
-
+      opacity: 1;
       @media (max-width: 767px) {
         animation: none;
-        transform: translateX(0);
     }
     }
   
     &.deactivated {
       animation: slideScreenOut 1s cubic-bezier(0.68, 0, 0.27, 1) forwards;
-      transform: translateX(100%);
 
       @media (max-width: 767px) {
         animation: none;
-        transform: translateX(0);
     }
-    }
-
-    .about-title {
-      margin-left: 30px;
     }
   
     @keyframes slideScreenOut {
       0% {
         transform: translateX(1%);
+        opacity: 1;
       }
   
       100% {
         transform: translateX(100%);
+        opacity: 0;
       }
     }
   
     @keyframes slideScreenIn {
       0% {
         transform: translateX(100%);
+        opacity: 0;
       }
   
       100% {
         transform: translateX(1%);
+        opacity: 1;
       }
+    }
+
+    .about-title {
+      margin-left: 30px;
     }
   
     .screen-container {

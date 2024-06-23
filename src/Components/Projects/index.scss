@@ -1,15 +1,22 @@
 #projects {
-    height: 835px;
-    width: 1456px;
-    padding: 0 128px 24px 192px;
+    width: 85vw;
+    height: 130vh;
+    margin: 0 auto;
+    padding: 0;
+
 
     @media (max-width: 767px) {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        margin-top: 100%;
-        margin-left: 15%;
+        
+    }
+}
+
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr;
     }
 }
 

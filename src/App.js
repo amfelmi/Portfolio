@@ -7,13 +7,14 @@ import Projects from './Components/Projects'
 import Contact from './Components/Contact'
 import Footer from './Components/Footer'
 
+
 function App() {
 
   const isMobile = window.innerWidth <= 767;
   return (
     <div className='app'>
       {!isMobile && <Layout />}
-      <Sidebar />
+      {!isMobile && <Sidebar />}
       <Home />
       {isMobile && <About />}
       <Projects />

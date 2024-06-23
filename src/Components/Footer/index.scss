@@ -8,6 +8,10 @@
     font-family: 'Coolvetica';
     letter-spacing: 1px;
 
+    p{
+        margin: 0;
+    }
+
     @media (max-width: 767px) {
         padding: 20px;
         font-size: 11px;

@@ -3,6 +3,7 @@ html {
 }
 
 body {
+  padding: 0;
   margin: 0;
   font: 300 11px/1.4 'Helvetica', 'sans-serif';
   color: #9329f7;

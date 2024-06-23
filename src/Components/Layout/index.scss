@@ -5,7 +5,7 @@
 
 .top-tags {
     bottom: auto;
-    top: 35px;
+    top: 3.5vh;
     animation: fadeIn 1s 4s backwards;
 }
 
@@ -14,10 +14,14 @@
     opacity: 0.9;
     position: absolute;
     bottom: 0;
-    left: 120px;
-    font-size: 18px;
-    font-size: 18px;
+    left: 170px;
+    font-size: 1.8em;
     font-family: 'Wallpoet Regular';
+    animation: fadeIn 1s 4s backwards;
+}
+
+.top-tag-body {
+    margin-left: 20px;
     animation: fadeIn 1s 4s backwards;
 }
 

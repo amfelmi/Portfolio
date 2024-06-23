@@ -4,42 +4,23 @@ import PropTypes from 'prop-types';
 import './index.scss';
 
 const Program = (props) => {
-  const { idx, title, video } = props;
+  const { idx, title, img, tech1, tech2, tech3, tech4 } = props;
+  const technologies = [tech1, tech2, tech3, tech4].filter(Boolean); // Filter out any undefined or null values
+
   return (
     <div className='Program-container'>
-      <div className='Program-info'>
-        <h2 className='Program-title'>{idx}: {title}</h2>
-        <ul className='Program-description'>
-            <li className='Program-description-item'>A content-based recommendation system using RAWG API and 
-                user interactions for personalised suggestions</li>
-            <li className='Program-description-item'>Responsive design with an intuitive search bar for seamless game discovery.</li>
-            <li className='Program-description-item'>Registration system ensures secure authentication with 
-                bcrypt password hashing and cookie creation.</li>
-            <li className='Program-description-item'>List management system allows users to organize 
-                and personalize their game preferences.</li>
-            <li className='Program-description-item'>Utilizes RESTful API principles for 
-                efficient communication between frontend and backend.</li>
-        </ul>
-      </div>
-      <div className='Program-video'>
-        <div className='technologies'>
-            <div className='technology-items'><h1>React</h1></div>
-            <div className='technology-items'><h1>Express.js</h1></div>
-            <div className='technology-items'><h1>Python</h1></div>
-            <div className='technology-items'><h1>MySQL</h1></div>
+      <div className='Program-img'>
+        <div className='technologies' style={{ gridTemplateColumns: `repeat(${technologies.length}, 1fr)` }}>
+        {technologies.map((tech, index) => (
+            <div key={index} className='technology-items'>
+              <h1>{tech}</h1>
+            </div>
+          ))}
         </div>
-        <video
-          id='mygamelistvideo'
-          controls
-          autoPlay
-          muted={true}
-          loop={true}
-        >
-          <source src={video} type='video/mp4' />
-          <source src={video} type='video/ogg' />
-          Your browser does not support the video tag.
-        </video>
+        <img id='mygamelistimg' src={img} alt='My Game List Website'/>
       </div>
+      <h1 className='program-title'>{title}</h1>
+      <button className='show-more-btn'><a className='program-link' href={idx}>More Detail</a></button>
     </div>
   );
 };
@@ -47,7 +28,11 @@ const Program = (props) => {
 Program.propTypes = {
   idx: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  video: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  tech1: PropTypes.string,
+  tech2: PropTypes.string,
+  tech3: PropTypes.string,
+  tech4: PropTypes.string,
 };
 
 export default Program;

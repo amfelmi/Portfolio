@@ -8,9 +8,9 @@ const About = ({ isActivated }) => {
   return (
     <div id="about" className={`screen ${isActivated ? 'activated' : 'deactivated'}`}>
       <div className='screen-container'>
-        { isMobile && <h1 className='about-title'>{'< About />'}</h1> }
+        { isMobile && <h1 className='about-title'>{'<About>'}</h1> }
         <div className='screen-image-container'>
-          <img src={Photo} className='photo' />
+          <img src={Photo} alt='Abdulmajid' className='photo' />
         </div>
         <div className='screen-info-container' >
           <p className='greeting'>

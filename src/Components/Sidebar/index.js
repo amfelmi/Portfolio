@@ -3,22 +3,27 @@ import './index.scss'
 import React from 'react'
 import LogoA from './../../assets/images/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faUser, faHome, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faUser, faHome, faLaptopCode, faBars } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faReact, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Sidebar = () => {
   return (
     <div className='navbar'>
-      <Link className='logo' to="/">
-        <img src={LogoA} alt='logo' />
-      </Link>
-      <nav>
-        <Link 
-        activeclassname="active" 
+      <Link
+        className='logo'
         to="home"
         smooth={true}
         offset={-70}
-        duration={500}
+        duration={500}>
+        <img src={LogoA} alt='logo' />
+      </Link>
+      <nav>
+        <Link
+          activeclassname="active"
+          to="home"
+          smooth={true}
+          offset={-70}
+          duration={500}
         >
           <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
         </Link>
@@ -32,23 +37,23 @@ const Sidebar = () => {
         >
           <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
         </Link> */}
-        <Link 
-        activeclassname="active" 
-        className="project-link" 
-        to="projects"
-        smooth={true}
-        offset={-70}
-        duration={500}
+        <Link
+          activeclassname="active"
+          className="project-link"
+          to="projects"
+          smooth={true}
+          offset={-70}
+          duration={500}
         >
           <FontAwesomeIcon icon={faLaptopCode} color="#4d4d4e" />
         </Link>
-        <Link 
-        activeclassname="active" 
-        className="contact-link" 
-        to="contact"
-        smooth={true}
-        offset={-70}
-        duration={500}
+        <Link
+          activeclassname="active"
+          className="contact-link"
+          to="contact"
+          smooth={true}
+          offset={-70}
+          duration={500}
         >
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
         </Link>
@@ -82,6 +87,9 @@ const Sidebar = () => {
           </a>
         </li>
       </ul>
+      {/* <div className='mobile_btn'>
+        <FontAwesomeIcon icon={faBars} color='#4d4d4e' />
+      </div> */}
     </div>
   )
 }

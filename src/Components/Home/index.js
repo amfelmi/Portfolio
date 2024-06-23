@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-scroll'
 import './index.scss'
 import LogoTitleA from '../../assets/images/logo-letter-a.png';
@@ -11,13 +11,15 @@ import About from './About';
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const [letterClassTwo, setLetterClassTwo] = useState('text-decoder')
-  const [activated, setActivated] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [activated, setActivated] = useState(false)
 
   const nameArray = ['B', 'D', 'U', 'L', 'M', 'A', 'J', 'I', 'D']
   const surnameArray = ['L', 'M', 'I']
   const jobArray = ['W', 'e', 'b', " ", 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r']
   const jobArray_2 = ['J', 'a', 'v', 'a', ' ', 'E', 'n', 'g', 'i', 'n', 'e', 'e', 'r']
+  const [showAnimation, setShowAnimation] = useState(true);
+  const animationRef = useRef(null);
 
   const isMobile = window.innerWidth <= 767;
 
@@ -38,6 +40,7 @@ const Home = () => {
     return () => clearTimeout(timeoutId);
   }, []);
 
+  // METHOD TO SLIDE ABOUT PAGE. WILL NOT USE DUE TO PERFORMANCE ISSUE TANKING
   // useEffect(() => {
   //   const timeoutId = setTimeout(() => {
   //     setActivated(true)
@@ -46,6 +49,7 @@ const Home = () => {
   //   return () => clearTimeout(timeoutId);
   // }, []);
 
+  // ABOUT page slider 
   const handleActivationStatus = (() => {
     if (activated) {
       setActivated(false);
@@ -65,15 +69,26 @@ const Home = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
+
+  // Replace h2 with static h2 (due to letter spacing issues)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowAnimation(false);
+    }, 5950);
+
+    return () => clearTimeout(timer);
+  }, []);
+
 
   return (
-    <section id='home' className='container home-page'>
+    <section id='home' className='block home-page'>
+      <div className='invis'>
       <button onClick={handleActivationStatus} className={`activator ${activated ? 'about-active' : 'about-inactive'}`}>
         <span className={`${activated ? '' : 'spin'}`}>
-        {activated ? '>' : 'About me'}
+          {activated ? '>' : 'ABOUT ME'}
         </span>
       </button>
+      </div>
       <Launcher />
       <div className='text-zone'>
         <h1>
@@ -88,13 +103,19 @@ const Home = () => {
             idx={43}
           />
         </h1>
-        <h2><DecodeAnimation letterClass={letterClassTwo}
-          strArray={jobArray}
-          delay={4000}
-        /> | <DecodeAnimation letterClass={letterClassTwo}
-          strArray={jobArray_2}
-          delay={4000}
-          /></h2>
+        {showAnimation ? (
+        <h2 ref={animationRef}>
+          <DecodeAnimation letterClass={letterClassTwo}
+            strArray={jobArray}
+            delay={4000}
+          /> | <DecodeAnimation letterClass={letterClassTwo}
+            strArray={jobArray_2}
+            delay={4000}
+          />
+        </h2>
+      ) : (
+        <h2>Web Developer | Java Engineer</h2>
+      )}
         <Link
           to="contact"
           smooth={true}
@@ -110,10 +131,12 @@ const Home = () => {
           duration={500}
           className={`scroller ${!isScrolled ? 'visible' : ''}`}
         >
-        
+
         </Link>
       </div>
-      {!isMobile && <About isActivated={activated}/>}
+      <div className='invis'>
+      {!isMobile && <About isActivated={activated} />}
+      </div>
     </section>
   )
 }

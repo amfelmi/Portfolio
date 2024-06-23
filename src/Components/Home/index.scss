@@ -81,8 +81,9 @@
 
         @media (max-width: 767px) {
             font-size: 30px;
-            
-            .logo-title-A,.logo-title-E {
+
+            .logo-title-A,
+            .logo-title-E {
                 width: 40px;
             }
         }
@@ -119,7 +120,7 @@
         background-color: #4B0082;
 
         @media (max-width: 767px) {
-                padding: 5px 5px;
+            padding: 5px 5px;
         }
 
 
@@ -127,6 +128,10 @@
             background-color: #7f03d8;
             color: #b7c1de;
             cursor: pointer;
+        }
+
+        &:focus {
+            background-color: #4B0082;
         }
 
         @keyframes enlargeShrink {
@@ -147,7 +152,7 @@
         }
     }
 
-    .invis{
+    .invis {
         animation: fadeIn 1s 4s backwards;
     }
 
@@ -187,7 +192,7 @@
             text-orientation: mixed;
         }
     }
-    
+
 
     .scroller {
         border: 2px solid #8400ff;
@@ -213,6 +218,7 @@
             transform: translateY(25%);
             opacity: 0;
         }
+
         100% {
             transform: translateY(0);
             opacity: 1;
@@ -224,6 +230,7 @@
             transform: translateY(0);
             opacity: 1;
         }
+
         100% {
             transform: translateY(25%);
             opacity: 0;

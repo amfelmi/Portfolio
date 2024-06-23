@@ -72,20 +72,10 @@ const Contact = () => {
       </div>
       </div>
       <div className='map-container'>
-      <div className='info-map'>
-        Abdulmajid Elmi,
-        <br/>
-        United Kingdom,
-        <br />
-        109 Warwick Road,
-        <br/>
-        Birmingham
-        <span>amfelmi10@gmail.com</span>
-      </div>
       <div className='map-wrap'>
-        <MapContainer center={[52.456429, -1.864394]} zoom={13}>
+        <MapContainer center={[52.4775, -1.8941]} zoom={8}>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-          <Marker position={[52.456429, -1.864394]}>
+          <Marker position={[52.4775, -1.8941]}>
             <Popup>Hi there!</Popup>
           </Marker>
         </MapContainer>

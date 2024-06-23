@@ -1,4 +1,5 @@
 .Program-container {
+  height: 85vh;
   border: 1px solid grey;
   border-radius: 10px;
   padding: 5px;
@@ -12,6 +13,11 @@
     .Program-img,
     .technologies {
       opacity: 0.3;
+    }
+
+    .Program-info {
+      opacity: 0.3;
+      cursor: default;
     }
 
     .program-title {
@@ -40,34 +46,56 @@
   font-family: 'Wallpoet Regular';
 }
 
-// .Program-description {
-//   margin-top: 10px;
-//   font-size: 18px;
+.front {
+  display: flex;
+  flex-direction: row;
 
-//   @media (max-width: 767px) {
-//     font-size: 15px;
-//     margin: 7%;
-//     padding: 0;
-//   }
-// }
+}
 
-// .Program-description-item {
-//   padding: 8px;
+.Program-info {
+  padding: 10px;
 
-//   @media (max-width: 767px) {
-//     padding: 4px;
-//   }
-// }
+  // @media (max-width: 767px) {
+  //   padding: 0;
+  // }
+}
+
+.File-title {
+  font-size: 1.8vw;
+  padding: 10px;
+  font-family: 'Wallpoet Regular';
+}
+
+.Program-description {
+  letter-spacing: 2px;
+  font-size: 1.2vw;
+
+  @media (max-width: 767px) {
+    // font-size: 15px;
+    // margin: 7%;
+    // padding: 0;
+  }
+}
+
+.Program-description-item {
+  padding: 8px;
+
+  @media (max-width: 767px) {
+    // padding: 4px;
+  }
+}
 
 #mygamelistimg {
   width: 100%;
   border-radius: 15px;
-  border: 3px solid rgb(41, 41, 41);
+  border: 1px solid rgb(41, 41, 41);
 }
 
 .Program-img {
   padding: 15px;
+  margin-top: 5vw;
   max-width: 40vw; // Changed from 500px
+  border-radius: 6px;
 
   @media (max-width: 767px) {
     flex-direction: column;
@@ -88,9 +116,6 @@
 }
 
 .technology-items {
-  // width: 100%;
-  // border: 2px solid #4B0082;
-  // text-align: center;
   border-radius: 5px;
   color: #b7c1de;
   font-family: 'Wallpoet Regular';
@@ -103,16 +128,15 @@
   transform: translate(-50%, -50%);
   display: none;
   opacity: 1;
-
   color: #b7c1de;
-  font-size: 1.125vw; 
+  font-size: 2vw;
   font-weight: 400;
-  letter-spacing: 4px; 
+  letter-spacing: 3px;
   font-family: 'Wallpoet Regular';
   text-decoration: none;
-  padding: 12px 20px; 
+  padding: 30px 40px;
   border: 1px solid #4B0082;
-  border-radius: 5px; 
+  border-radius: 5px;
   white-space: nowrap;
   background-color: #4B0082;
 
@@ -120,6 +144,10 @@
     background-color: #7f03d8;
     color: #b7c1de;
     cursor: pointer;
+  }
+
+  &:focus {
+    background-color: #4B0082;
   }
 }
 
@@ -130,14 +158,57 @@
   transform: translate(-50%, -50%);
   display: none;
   opacity: 1;
-
   color: white;
-  font-size: 2.5em;
+  font-size: 2vw;
   border-bottom: 1px solid gold;
   padding: 10px 20px;
 }
 
-.program-link{
+.program-link {
   color: inherit;
   text-decoration: none;
+}
+
+.back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#program-video {
+  width: 70%;
+  border-radius: 6px;
+  border: 4px solid rgb(41, 41, 41);
+  margin-top: 2%;
+}
+
+.flip-back-btn {
+  color: #b7c1de;
+  font-size: 1vw;
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-family: 'Wallpoet Regular';
+  text-decoration: none;
+  margin-top: 2%;
+  padding: 25px;
+  width: 40%;
+  border: 1px solid #4B0082;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: #4B0082;
+
+  &:hover {
+    background-color: #7f03d8;
+    color: #b7c1de;
+    cursor: pointer;
+  }
+
+  &:focus {
+    background-color: #4B0082;
+  }
+}
+
+.no-video-placeholder{
+  margin-top: 8%;
 }

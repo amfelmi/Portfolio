@@ -1,7 +1,8 @@
 #contact {
-    height: 835px;
-    width: 1456px;
-    padding: 0 128px 24px 192px;
+    width: 85vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
 
     @media (max-width: 767px) {
         width: 100%;
@@ -136,34 +137,6 @@ textarea {
             color: #b7c1de;
             cursor: pointer;
         }
-}
-
-.info-map {
-    position: absolute;
-    right: 2%;
-    background-color: #4B0082;
-    border-radius: 30px;
-    z-index: 999999;
-    width: 180px;
-    padding: 20px;
-    color: #fff;
-    font-family: 'Helvetica';
-    font-size: 17px;
-    font-weight: 300;
-    opacity: 0;
-    animation: fadeIn 1s 1.5s forwards;
-    text-align: right;
-
-    @media (max-width: 767px) {
-        visibility: hidden;
-    }
-
-    span {
-        font-size: 16px;
-        display: block;
-        padding-top: 20px;
-        color: #ffd700;
-    }
 }
 
 .map-wrap {

@@ -1,11 +1,15 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.cd573700.css",
-    "main.js": "/Portfolio/static/js/main.10f7ea9b.js",
+    "main.css": "/Portfolio/static/css/main.235f4de5.css",
+    "main.js": "/Portfolio/static/js/main.e77dbd8b.js",
     "static/js/787.89284b06.chunk.js": "/Portfolio/static/js/787.89284b06.chunk.js",
     "static/media/my game list website.mp4": "/Portfolio/static/media/my game list website.bbb7f72a8b17b77deb89.mp4",
+    "static/media/terminal pokemon.mp4": "/Portfolio/static/media/terminal pokemon.9914379daac56e2a72ca.mp4",
+    "static/media/mgl landing page.png": "/Portfolio/static/media/mgl landing page.76ddb2d27419effa54cc.png",
     "static/media/portfolio picture.jpg": "/Portfolio/static/media/portfolio picture.f1ab1d29b9991737d5de.jpg",
+    "static/media/terminal_pokemon.png": "/Portfolio/static/media/terminal_pokemon.ba16a38de16574f499d7.png",
     "static/media/Sdasian-WyDon.ttf": "/Portfolio/static/media/Sdasian-WyDon.d1c449ac54b26e709528.ttf",
+    "static/media/portfolio page.png": "/Portfolio/static/media/portfolio page.dd88ce4651736b8a4d86.png",
     "static/media/4a8cd51c-cf0e-4708-8292-4248daf7a07d.ttf": "/Portfolio/static/media/4a8cd51c-cf0e-4708-8292-4248daf7a07d.eefcad8b38446402acd8.ttf",
     "static/media/logo-letter-a.png": "/Portfolio/static/media/logo-letter-a.f7f471c6631de545a0d3.png",
     "static/media/af05f960-e9e3-4070-bff0-5f8606dd617c.ttf": "/Portfolio/static/media/af05f960-e9e3-4070-bff0-5f8606dd617c.a4f1d015f23371faffb2.ttf",
@@ -18,12 +22,12 @@
     "static/media/CoolveticaRg-Regular.woff2": "/Portfolio/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "static/media/Demosdcyberglitch-yw6GM.ttf": "/Portfolio/static/media/Demosdcyberglitch-yw6GM.ad21887a0de0fa8ba855.ttf",
     "index.html": "/Portfolio/index.html",
-    "main.cd573700.css.map": "/Portfolio/static/css/main.cd573700.css.map",
-    "main.10f7ea9b.js.map": "/Portfolio/static/js/main.10f7ea9b.js.map",
+    "main.235f4de5.css.map": "/Portfolio/static/css/main.235f4de5.css.map",
+    "main.e77dbd8b.js.map": "/Portfolio/static/js/main.e77dbd8b.js.map",
     "787.89284b06.chunk.js.map": "/Portfolio/static/js/787.89284b06.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd573700.css",
-    "static/js/main.10f7ea9b.js"
+    "static/css/main.235f4de5.css",
+    "static/js/main.e77dbd8b.js"
   ]
 }
